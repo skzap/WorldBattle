@@ -4,5 +4,6 @@
 *.gif
 *.webp
 *.txt
+*.ico
 .prettierignore
 .gitignore

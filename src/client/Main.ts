@@ -1,5 +1,5 @@
 import { ClientGameRunner, joinLobby } from "./ClientGameRunner";
-import favicon from "../../resources/images/Favicon.svg";
+// import favicon from "../../resources/images/Favicon.svg";
 import "./PublicLobby";
 import "./UsernameInput";
 import "./styles.css";
@@ -61,7 +61,7 @@ class Client {
       }
     });
 
-    setFavicon();
+    // setFavicon();
     document.addEventListener("join-lobby", this.handleJoinLobby.bind(this));
     document.addEventListener("leave-lobby", this.handleLeaveLobby.bind(this));
     document.addEventListener(
@@ -69,27 +69,27 @@ class Client {
       this.handleSinglePlayer.bind(this),
     );
 
-    const spModal = document.querySelector(
-      "single-player-modal",
-    ) as SinglePlayerModal;
-    spModal instanceof SinglePlayerModal;
-    document.getElementById("single-player").addEventListener("click", () => {
-      if (this.usernameInput.isValid()) {
-        spModal.open();
-      }
-    });
+    // const spModal = document.querySelector(
+    //   "single-player-modal",
+    // ) as SinglePlayerModal;
+    // spModal instanceof SinglePlayerModal;
+    // document.getElementById("single-player").addEventListener("click", () => {
+    //   if (this.usernameInput.isValid()) {
+    //     spModal.open();
+    //   }
+    // });
 
-    const hostModal = document.querySelector(
-      "host-lobby-modal",
-    ) as HostPrivateLobbyModal;
-    hostModal instanceof HostPrivateLobbyModal;
-    document
-      .getElementById("host-lobby-button")
-      .addEventListener("click", () => {
-        if (this.usernameInput.isValid()) {
-          hostModal.open();
-        }
-      });
+    // const hostModal = document.querySelector(
+    //   "host-lobby-modal",
+    // ) as HostPrivateLobbyModal;
+    // hostModal instanceof HostPrivateLobbyModal;
+    // document
+    //   .getElementById("host-lobby-button")
+    //   .addEventListener("click", () => {
+    //     if (this.usernameInput.isValid()) {
+    //       hostModal.open();
+    //     }
+    //   });
 
     this.joinModal = document.querySelector(
       "join-private-lobby-modal",
@@ -177,13 +177,15 @@ document.addEventListener("DOMContentLoaded", () => {
   new Client().initialize();
 });
 
-function setFavicon(): void {
-  const link = document.createElement("link");
-  link.type = "image/x-icon";
-  link.rel = "shortcut icon";
-  link.href = favicon;
-  document.head.appendChild(link);
-}
+//document.body.style.backgroundImage = `url(${backgroundImage})`;
+
+// function setFavicon(): void {
+//   const link = document.createElement("link");
+//   link.type = "image/x-icon";
+//   link.rel = "shortcut icon";
+//   link.href = favicon;
+//   document.head.appendChild(link);
+// }
 
 // WARNING: DO NOT EXPOSE THIS ID
 export function getPersistentIDFromCookie(): string {

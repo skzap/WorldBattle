@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenFront (ALPHA)</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../resources/images/favicon.ico"
+    />
+    <title>World Battle ALPHA</title>
 
     <!-- Critical CSS to prevent FOUC -->
     <style>
@@ -27,7 +32,7 @@
 
       .bg-image {
         content: "";
-        background-image: url("/images/EuropeBackground.svg");
+        background-image: url("/images/background.jpg");
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
@@ -40,8 +45,8 @@
         z-index: -1;
       }
 
-      .dark .bg-image {
-        filter: blur(4px) brightness(0.7);
+      body {
+        background-image: url("./images/background.jpg");
       }
 
       /* Critical styles to prevent layout shift */
@@ -97,63 +102,13 @@
     class="h-full select-none font-sans min-h-screen bg-opacity-0 bg-cover bg-center bg-fixed transition-opacity duration-300 ease-in-out flex flex-col"
   >
     <!-- Logo section remains the same -->
-    <div
+    <!-- <div
       class="flex justify-center items-center flex-col w-full bg-gray-900/80 backdrop-blur-md pt-8 pb-2 px-8"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1364 259"
-        width="100%"
-        height="100%"
-        fill="currentColor"
-        class="max-w-[450px] h-full logo-glow"
-      >
-        <defs>
-          <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color: #2563eb" />
-            <stop offset="100%" style="stop-color: #3b82f6" />
-          </linearGradient>
-        </defs>
-        <g>
-          <path
-            d="M0,174V51h15.24v-17.14h16.81v-16.98h16.96V0h1266v17.23h17.13v16.81h16.98v16.96h14.88v123h-15.13v17.08h-17.08v17.08h-16.9v17.04H324.9v16.86h-16.9v16.95h-102v-17.12h-17.07v-17.05H48.73v-17.05h-16.89v-16.89H14.94v-16.89H0ZM1297.95,17.35H65.9v16.7h-17.08v17.08h-14.5v123.08h14.85v16.9h17.08v17.08h139.9v17.08h17.08v16.36h67.9v-16.72h17.08v-17.07h989.88v-17.07h17.08v-16.9h14.44V50.8h-14.75v-17.08h-16.9v-16.37Z"
-          />
-          <path
-            d="M189.1,154.78v17.07h-16.9v16.75h-51.07v-16.42h-16.9v-17.07h-16.97v-84.88h16.63v-17.07h16.9v-16.84h51.07v16.5h17.07v17.07h16.7v84.89h-16.54ZM137.87,53.1v17.15h-16.6v84.86h16.97v16.61h16.89v-16.97h16.6v-84.86h-16.97v-16.79h-16.89Z"
-          />
-          <path
-            d="M273.91,104.06v-16.73h50.92v16.45h16.85v68.05h-16.44v17.06h-50.96v16.88h16.4v16.96h-67.28v-16.61h16.33v-101.86h-16.38v-16.98h33.4v16.63c6.12,0,11.72,0,17.31,0,0,22.56,0,45.13,0,67.75h33.59v-67.61h-33.73Z"
-          />
-          <path
-            d="M631.12,188.64v-16.36h16.53V53.2h-16.25v-16.86h118.33v33.29h-16.65v-16.36h-50.72v50.44h33.36v-16.35h16.99v50.25h-16.6v-16.33h-33.73v50.65h16.37v16.72h-67.63Z"
-          />
-          <path
-            d="M596.78,103.8v84.94h-33.54v-84.39h-34.03v84.25h-33.85v-101.29h84.5v16.49h16.93Z"
-          />
-          <path
-            d="M1107.12,188.71v-84.34h-34.03v84.37h-33.7v-101.41h84.42v16.41h16.86v84.96h-33.54Z"
-          />
-          <path
-            d="M988.1,171.78v16.87h-67.88v-16.38h-16.87v-68.06h16.38v-16.87h68.06v16.38h16.87v68.06h-16.55ZM970.78,104.35h-33.39v67.38h33.39v-67.38Z"
-          />
-          <path
-            d="M460.77,155.38v16.49h-16.58v16.83h-68.05v-16.5h-16.83v-68.05h16.49v-16.83h68.05v16.49h16.83v34.06h-67.31v33.82h33.47v-16.31h33.92ZM393.39,104.18v16.56h33.3v-16.56h-33.3Z"
-          />
-          <path
-            d="M1209.13,172h-16.9v-67.9h-16.96v-16.9h16.68v-17.08h16.9v-16.82h16.9v33.58h50.98v16.91h-50.4v67.96h16.48v-16.43h50.95v16.54h-16.55v16.76h-68.08v-16.6Z"
-          />
-          <path
-            d="M834.91,120.94v16.96h-16.65v33.88h16.41v16.96h-67.29v-16.63h16.34v-67.87h-16.4v-16.97h50.42v33.81h17.3l-.14-.14Z"
-          />
-          <path
-            d="M835.05,121.08v-33.75h33.76v16.43h16.85v33.96h-33.43v-16.79c-6.13,0-11.73,0-17.32,0,0,0,.14.14.14.14Z"
-          />
-        </g>
-      </svg>
       <div class="flex justify-center text-sm font-bold mt-[-5px] logo-version">
         v0.15.1
       </div>
-    </div>
+    </div> -->
 
     <div class="bg-image"></div>
 
@@ -162,6 +117,12 @@
     <!-- Main container with responsive padding -->
     <div class="flex justify-center items-center flex-grow">
       <div class="container px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8">
+        <img
+          class="relative flex gap-1 items-center max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-2 pb-4"
+          src="https://i.imgur.com/Ffh8BZi.png"
+          style="max-width: 275px"
+        />
+
         <div
           class="relative flex gap-1 items-center max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto p-2 pb-4"
         >
@@ -169,20 +130,456 @@
           <username-input class="w-full"></username-input>
         </div>
 
+        <!-- LOGIN METAMASK -->
         <div class="max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto mt-4">
-          <a
-            href="/auth/discord"
-            class="w-full bg-[#5865F2] hover:bg-[#4752C4] text-white p-3 sm:p-4 lg:p-5 font-medium text-lg sm:text-xl lg:text-2xl rounded-lg border-none cursor-pointer transition-colors duration-300 flex justify-center"
+          <button
+            type="button"
+            class="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2"
           >
-            Login with Discord
-          </a>
+            <svg
+              aria-hidden="true"
+              class="w-6 h-5 me-2 -ms-1"
+              viewBox="0 0 2405 2501"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_1512_1323)">
+                <path
+                  d="M2278.79 1730.86L2133.62 2221.69L1848.64 2143.76L2278.79 1730.86Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1848.64 2143.76L2123.51 1767.15L2278.79 1730.86L1848.64 2143.76Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2065.2 1360.79L2278.79 1730.86L2123.51 1767.15L2065.2 1360.79ZM2065.2 1360.79L2202.64 1265.6L2278.79 1730.86L2065.2 1360.79Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1890.29 1081.17L2285.34 919.338L2265.7 1007.99L1890.29 1081.17ZM2253.21 1114.48L1890.29 1081.17L2265.7 1007.99L2253.21 1114.48Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2253.21 1114.48L2202.64 1265.6L1890.29 1081.17L2253.21 1114.48ZM2332.34 956.82L2265.7 1007.99L2285.34 919.338L2332.34 956.82ZM2253.21 1114.48L2265.7 1007.99L2318.65 1052.01L2253.21 1114.48Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1542.24 2024.17L1641 2055.7L1848.64 2143.75L1542.24 2024.17Z"
+                  fill="#E2761B"
+                  stroke="#E2761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2202.64 1265.6L2253.21 1114.48L2296.64 1147.8L2202.64 1265.6ZM2202.64 1265.6L1792.71 1130.55L1890.29 1081.17L2202.64 1265.6Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1987.86 617.696L1890.29 1081.17L1792.71 1130.55L1987.86 617.696Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2285.34 919.338L1890.29 1081.17L1987.86 617.696L2285.34 919.338Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1987.86 617.696L2400.16 570.1L2285.34 919.338L1987.86 617.696Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2202.64 1265.6L2065.2 1360.79L1792.71 1130.55L2202.64 1265.6Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2382.31 236.33L2400.16 570.1L1987.86 617.696L2382.31 236.33Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2382.31 236.33L1558.3 835.45L1547.59 429.095L2382.31 236.33Z"
+                  fill="#E2761B"
+                  stroke="#E2761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M934.789 380.309L1547.59 429.095L1558.3 835.449L934.789 380.309Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1792.71 1130.55L1558.3 835.449L1987.86 617.696L1792.71 1130.55Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1792.71 1130.55L2065.2 1360.79L1682.65 1403.04L1792.71 1130.55Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1682.65 1403.04L1558.3 835.449L1792.71 1130.55L1682.65 1403.04Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1987.86 617.696L1558.3 835.45L2382.31 236.33L1987.86 617.696Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M940.144 2134.24L1134.69 2337.11L869.939 2096.16L940.144 2134.24Z"
+                  fill="#C0AD9E"
+                  stroke="#C0AD9E"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1848.64 2143.75L1940.86 1793.33L2123.51 1767.15L1848.64 2143.75Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M151.234 1157.92L487.978 803.917L194.666 1115.67L151.234 1157.92Z"
+                  fill="#E2761B"
+                  stroke="#E2761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2123.51 1767.15L1940.86 1793.33L2065.2 1360.79L2123.51 1767.15ZM1558.3 835.449L1230.48 824.74L934.789 380.309L1558.3 835.449Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2065.2 1360.79L1940.86 1793.33L1930.74 1582.12L2065.2 1360.79Z"
+                  fill="#E4751F"
+                  stroke="#E4751F"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1682.65 1403.04L2065.2 1360.79L1930.74 1582.12L1682.65 1403.04Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1230.48 824.74L1558.3 835.449L1682.65 1403.04L1230.48 824.74Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1230.48 824.74L345.784 6.08252L934.79 380.309L1230.48 824.74ZM934.195 2258.58L165.513 2496.56L12.0146 1910.53L934.195 2258.58Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M265.465 1304.27L555.803 1076.41L799.14 1132.93L265.465 1304.27Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M799.139 1132.93L555.803 1076.41L686.098 538.567L799.139 1132.93Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M194.666 1115.67L555.803 1076.41L265.465 1304.27L194.666 1115.67Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1930.74 1582.12L1780.81 1506.56L1682.65 1403.04L1930.74 1582.12Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M194.666 1115.67L169.083 980.618L555.803 1076.41L194.666 1115.67Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1749.88 1676.72L1780.81 1506.56L1930.74 1582.12L1749.88 1676.72Z"
+                  fill="#233447"
+                  stroke="#233447"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1940.86 1793.33L1749.88 1676.72L1930.74 1582.12L1940.86 1793.33Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M555.803 1076.41L169.082 980.618L137.55 866.982L555.803 1076.41ZM686.098 538.567L555.803 1076.41L137.55 866.982L686.098 538.567ZM686.098 538.567L1230.48 824.74L799.139 1132.93L686.098 538.567Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M799.14 1132.93L1230.48 824.74L1422.65 1411.96L799.14 1132.93ZM1422.65 1411.96L826.508 1399.47L799.14 1132.93L1422.65 1411.96Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M265.465 1304.27L799.14 1132.93L826.508 1399.47L265.465 1304.27ZM1682.65 1403.04L1422.65 1411.96L1230.48 824.74L1682.65 1403.04Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1780.81 1506.56L1749.88 1676.72L1682.65 1403.04L1780.81 1506.56Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M345.784 6.08252L1230.48 824.74L686.098 538.567L345.784 6.08252Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M12.0146 1910.53L758.088 1879.59L934.195 2258.58L12.0146 1910.53Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M934.194 2258.58L758.088 1879.59L1124.58 1861.75L934.194 2258.58Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1749.88 1676.72L1940.86 1793.33L2046.16 2041.42L1749.88 1676.72ZM826.508 1399.47L12.0146 1910.53L265.465 1304.27L826.508 1399.47ZM758.088 1879.59L12.0146 1910.53L826.508 1399.47L758.088 1879.59ZM1682.65 1403.04L1731.43 1580.33L1495.83 1594.02L1682.65 1403.04ZM1495.83 1594.02L1422.65 1411.96L1682.65 1403.04L1495.83 1594.02Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1134.69 2337.11L934.194 2258.58L1631.48 2375.79L1134.69 2337.11Z"
+                  fill="#C0AD9E"
+                  stroke="#C0AD9E"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M265.465 1304.27L151.234 1157.91L194.666 1115.67L265.465 1304.27Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1710.61 2288.92L1631.48 2375.79L934.194 2258.58L1710.61 2288.92Z"
+                  fill="#D7C1B3"
+                  stroke="#D7C1B3"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1748.09 2075.93L934.194 2258.58L1124.58 1861.75L1748.09 2075.93Z"
+                  fill="#E4761B"
+                  stroke="#E4761B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M934.194 2258.58L1748.09 2075.93L1710.61 2288.92L934.194 2258.58Z"
+                  fill="#D7C1B3"
+                  stroke="#D7C1B3"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M137.55 866.982L110.777 409.462L686.098 538.567L137.55 866.982ZM194.665 1115.67L115.536 1035.35L169.082 980.618L194.665 1115.67Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1289.38 1529.76L1422.65 1411.96L1403.61 1699.92L1289.38 1529.76Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1422.65 1411.96L1289.38 1529.76L1095.43 1630.31L1422.65 1411.96Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2046.16 2041.42L2009.87 2014.65L1749.88 1676.72L2046.16 2041.42Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1095.43 1630.31L826.508 1399.47L1422.65 1411.96L1095.43 1630.31Z"
+                  fill="#CD6116"
+                  stroke="#CD6116"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1403.61 1699.92L1422.65 1411.96L1495.83 1594.02L1403.61 1699.92Z"
+                  fill="#E4751F"
+                  stroke="#E4751F"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M89.3589 912.199L137.55 866.982L169.083 980.618L89.3589 912.199Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1403.61 1699.92L1095.43 1630.31L1289.38 1529.76L1403.61 1699.92Z"
+                  fill="#233447"
+                  stroke="#233447"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M686.098 538.567L110.777 409.462L345.784 6.08252L686.098 538.567Z"
+                  fill="#763D16"
+                  stroke="#763D16"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1631.48 2375.79L1664.2 2465.03L1134.69 2337.12L1631.48 2375.79Z"
+                  fill="#C0AD9E"
+                  stroke="#C0AD9E"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1124.58 1861.75L1095.43 1630.31L1403.61 1699.92L1124.58 1861.75Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M826.508 1399.47L1095.43 1630.31L1124.58 1861.75L826.508 1399.47Z"
+                  fill="#E4751F"
+                  stroke="#E4751F"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1495.83 1594.02L1731.43 1580.33L2009.87 2014.65L1495.83 1594.02ZM826.508 1399.47L1124.58 1861.75L758.088 1879.59L826.508 1399.47Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1495.83 1594.02L1788.55 2039.64L1403.61 1699.92L1495.83 1594.02Z"
+                  fill="#E4751F"
+                  stroke="#E4751F"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1403.61 1699.92L1788.55 2039.64L1748.09 2075.93L1403.61 1699.92Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1748.09 2075.93L1124.58 1861.75L1403.61 1699.92L1748.09 2075.93ZM2009.87 2014.65L1788.55 2039.64L1495.83 1594.02L2009.87 2014.65Z"
+                  fill="#F6851B"
+                  stroke="#F6851B"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2068.18 2224.07L1972.99 2415.05L1664.2 2465.03L2068.18 2224.07ZM1664.2 2465.03L1631.48 2375.79L1710.61 2288.92L1664.2 2465.03Z"
+                  fill="#C0AD9E"
+                  stroke="#C0AD9E"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1710.61 2288.92L1768.92 2265.72L1664.2 2465.03L1710.61 2288.92ZM1664.2 2465.03L1768.92 2265.72L2068.18 2224.07L1664.2 2465.03Z"
+                  fill="#C0AD9E"
+                  stroke="#C0AD9E"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2009.87 2014.65L2083.05 2059.27L1860.54 2086.04L2009.87 2014.65Z"
+                  fill="#161616"
+                  stroke="#161616"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1860.54 2086.04L1788.55 2039.64L2009.87 2014.65L1860.54 2086.04ZM1834.96 2121.15L2105.66 2088.42L2068.18 2224.07L1834.96 2121.15Z"
+                  fill="#161616"
+                  stroke="#161616"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M2068.18 2224.07L1768.92 2265.72L1834.96 2121.15L2068.18 2224.07ZM1768.92 2265.72L1710.61 2288.92L1748.09 2075.93L1768.92 2265.72ZM1748.09 2075.93L1788.55 2039.64L1860.54 2086.04L1748.09 2075.93ZM2083.05 2059.27L2105.66 2088.42L1834.96 2121.15L2083.05 2059.27Z"
+                  fill="#161616"
+                  stroke="#161616"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1834.96 2121.15L1860.54 2086.04L2083.05 2059.27L1834.96 2121.15ZM1748.09 2075.93L1834.96 2121.15L1768.92 2265.72L1748.09 2075.93Z"
+                  fill="#161616"
+                  stroke="#161616"
+                  stroke-width="5.94955"
+                />
+                <path
+                  d="M1860.54 2086.04L1834.96 2121.15L1748.09 2075.93L1860.54 2086.04Z"
+                  fill="#161616"
+                  stroke="#161616"
+                  stroke-width="5.94955"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1512_1323">
+                  <rect
+                    width="2404"
+                    height="2500"
+                    fill="white"
+                    transform="translate(0.519043 0.132812)"
+                  />
+                </clipPath>
+              </defs>
+            </svg>
+            Connect with MetaMask
+          </button>
         </div>
 
+        <!-- NEXT BATTLE -->
         <div class="max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto mt-4">
           <public-lobby class="w-full"></public-lobby>
         </div>
 
-        <div
+        <!-- <div
           class="pt-4 flex gap-4 sm:gap-6 lg:gap-8 max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto"
         >
           <button
@@ -197,7 +594,7 @@
           >
             Join Lobby
           </button>
-        </div>
+        </div> -->
 
         <div
           class="max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto mt-4 sm:mt-6 lg:mt-8"
@@ -265,7 +662,7 @@
             >How to Play</a
           >
           <a
-            href="https://discord.gg/k22YrnAzGp"
+            href="https://discord.gg/kgP8cyMF"
             class="text-white/70 hover:text-white transition-colors duration-300"
             target="_blank"
             >Discord</a

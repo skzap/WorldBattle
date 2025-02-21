@@ -9,11 +9,11 @@ export class DevServerConfig extends DefaultServerConfig {
     return GameEnv.Dev;
   }
   gameCreationRate(): number {
-    return 10 * 1000;
+    return 30 * 1000;
   }
 
   lobbyLifetime(): number {
-    return 10 * 1000;
+    return 180 * 1000;
   }
 
   discordRedirectURI(): string {

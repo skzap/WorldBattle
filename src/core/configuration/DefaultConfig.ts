@@ -33,7 +33,7 @@ export abstract class DefaultServerConfig implements ServerConfig {
     return 1 * 60 * 1000;
   }
   lobbyLifetime(): number {
-    return 2 * 60 * 1000;
+    return 3 * 60 * 1000;
   }
 }
 

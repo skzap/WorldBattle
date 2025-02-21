@@ -69,15 +69,15 @@ class Client {
       this.handleSinglePlayer.bind(this),
     );
 
-    // const spModal = document.querySelector(
-    //   "single-player-modal",
-    // ) as SinglePlayerModal;
-    // spModal instanceof SinglePlayerModal;
-    // document.getElementById("single-player").addEventListener("click", () => {
-    //   if (this.usernameInput.isValid()) {
-    //     spModal.open();
-    //   }
-    // });
+    const spModal = document.querySelector(
+      "single-player-modal",
+    ) as SinglePlayerModal;
+    spModal instanceof SinglePlayerModal;
+    document.getElementById("single-player").addEventListener("click", () => {
+      if (this.usernameInput.isValid()) {
+        spModal.open();
+      }
+    });
 
     // const hostModal = document.querySelector(
     //   "host-lobby-modal",
